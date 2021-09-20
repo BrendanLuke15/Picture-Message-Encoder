@@ -1,6 +1,6 @@
 /*
 By: Brendan Luke
-Date: September 17, 2021
+Date: September 20, 2021
 Scope: stylesheet for picture message encoder project
 */
 
@@ -12,19 +12,52 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #header {
-    height: 5vh;
-    border-bottom: 0.3vh solid /*#45900f*/ rgba(41, 92, 5, 0.9);
-    box-shadow: 0vh 0.4vh 1.5vh rgba(0, 94, 169, 0.7);
+    height: 3.5vmax;
+    border-bottom: 0.3vmax solid /*#45900f*/ rgba(41, 92, 5, 0.9);
+    box-shadow: 0 0.4vmax 1.0vmax rgba(0, 94, 169, 0.7);
     background-image: linear-gradient(to bottom right, #dde0dd,#787);
-    margin-bottom: 1vh;
+    margin-bottom: 1vmax;
     display: flex;
-    line-height: 5vh;
+    line-height: 3.3vmax;
 }
 #header p {
     position: relative;
-    font-size: 3vh;
-    top: 0vh;
-    left: 2vw;
+    font-size: 3vmax;
+    top: 0;
+    left: 2vmin;
     margin: 0;
     /*font-family: ABeeZee;*/
+}
+#github {
+    position: absolute;
+    right: 2vmin;
+    font-size: 1.5vmax;
+    display: flex;
+    border: 0.3vmax solid rgba(41, 92, 5, 0.9);
+    border-radius: 0.75vmax;
+    height: 2.5vmax;
+    top: 0.2vmax;
+    line-height: 2.5vmax;
+    background-color: #dde0dd;
+}
+#github:hover {
+    border-color: #6e5494;
+    /* https://www.designpieces.com/palette/github-color-palette-hex-and-rgb/ */
+    background-color: #222;
+    color: #fff;
+    transition-duration: 0.25s;
+}
+#github a {
+    text-decoration: none;
+    color: #000;
+}
+#github a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+#encoderPage{
+    /*display: none;*/
+}
+#decoderPage{
+    /*display: none;*/
 }

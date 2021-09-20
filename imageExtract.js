@@ -1,6 +1,6 @@
 /*
 By: Brendan Luke
-Date: September 17, 2021
+Date: September 20, 2021
 Scope: script and functions to extract pixel value data from the image & display image
 */
 
@@ -14,9 +14,11 @@ function handleImage(e) { // file upload
     reader.onload = function(event) {
         var img = new Image();
         img.onload = function() { // display image in canvas (max dimension is 50vh or 60vw, maintain aspect ratio)
-            width = img.width;
-            height = img.height;
-            aspectRatio = width/height;
+            // img.width/height, window.innerHeigh/Width
+            imgAspectRatio = img.width/img.height;
+            screenAspectRatio = window.innerWidth/window.innerHeight;
+
+
 
             canvas.width = Math.min(img.width, 500);
             canvas.height = Math.min(img.height, 500);
