@@ -11,17 +11,32 @@
         <!-- favicon from https://iconarchive.com/show/100-flat-icons-by-graphicloads/location-icon.html with modification->
         <link rel="icon" type="image/png" href="favicon.png"/>-->
         <script src="imageExtract.js" async></script>
+        <script src="outputSelection.js" async></script>
     </head>
     <body>
         <div id="header">
             <p>Picture Message Encoder & Decoder</p>
             <div id="github"><a href="https://github.com/BrendanLuke15/Picture-Message-Encoder" target="_blank">GitHub</a></div>
         </div>
-        <div id="encoderPage">
-            <!-- for encoder operation -->
+        <div id="inputSelector"> <!-- default operation is encoding -->
+            Select Operation Type:
+            <span id="encode" onclick="encodeSelect()" class="active">Encoder</span>
+            <span id="decode" onclick="decodeSelect()">Decoder</span>
+            <!-- <p id="userPrompt">Select an operation type to proceed.</p> -->
         </div>
-        <div id="decoderPage">
-            <!-- for decoder operation -->
+        <!-- Encoder I/O -->
+        <div id="encoderInput">
+            
+        </div>
+        <div id="encoderOutput">
+            
+        </div>
+        <!-- Decoder I/O -->
+        <div id="decoderInput">
+            
+        </div>
+        <div id="decoderOutput">
+            
         </div>
 <!--
         <label>Image File:</label><br/>

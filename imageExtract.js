@@ -1,6 +1,6 @@
 /*
 By: Brendan Luke
-Date: September 20, 2021
+Date: September 21, 2021
 Scope: script and functions to extract pixel value data from the image & display image
 */
 

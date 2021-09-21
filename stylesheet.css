@@ -1,9 +1,10 @@
 /*
 By: Brendan Luke
-Date: September 20, 2021
+Date: September 21, 2021
 Scope: stylesheet for picture message encoder project
 */
 
+/* General */
 * {
     padding: 0;
     margin: 0;
@@ -11,9 +12,11 @@ Scope: stylesheet for picture message encoder project
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* Header */
 #header {
     height: 3.5vmax;
-    border-bottom: 0.3vmax solid /*#45900f*/ rgba(41, 92, 5, 0.9);
+    border-bottom: 0.3vmax solid rgba(41, 92, 5, 0.9);
     box-shadow: 0 0.4vmax 1.0vmax rgba(0, 94, 169, 0.7);
     background-image: linear-gradient(to bottom right, #dde0dd,#787);
     margin-bottom: 1vmax;
@@ -43,7 +46,7 @@ body {
 #github:hover {
     border-color: #6e5494;
     /* https://www.designpieces.com/palette/github-color-palette-hex-and-rgb/ */
-    background-color: #222;
+    background-color: #24292f; /* from inspecting GitHub website */
     color: #fff;
     transition-duration: 0.25s;
 }
@@ -55,9 +58,58 @@ body {
     text-decoration: none;
     color: #fff;
 }
-#encoderPage{
-    /*display: none;*/
+
+/* Selector */
+#inputSelector {
+    text-align: center;
+    padding: 0.5vmax;
+    font-size: 1.5vmax;
+    padding-bottom: 2.5vmax;
+    /*border: 1px solid black;*/
 }
-#decoderPage{
+#inputSelector span {
+    height: 1.5vmax;
+    font-size: 1.4vmax;
+    line-height: 1.4vmax;
+    border: 0.2vmax solid rgba(41, 92, 5, 0.9);
+    border-radius: 0.75vmax;
+    padding: 0.1vmax;
+    background-color: #dde0dd;
+}
+#inputSelector span:hover {
+    border-color: rgba(0, 94, 169, 1);
+    background-color: #ccc;
+    transition-duration: 0.25s;
+}
+#inputSelector span.active {
+    border-color: rgba(0, 94, 169, 1);
+    background-color: #ccc;
+}
+
+/* Encoder */
+#encoderInput {
+    height: calc(100vh - 3.5vmax - 1vmax - (0.5vmax + 1.5vmax + 2.5vmax) - 0.2vmax - 0.1vmax - 1vmax);
+    border: 1px solid #222;
+    border-radius: 0.75vmax;
+    width: 47vw;
+    margin-left: 2.5vw;
+    display: inline-block;
+    position: absolute;
+    top: calc(3.5vmax + 1vmax + (0.5vmax + 1.5vmax + 2.5vmax) + 0.5vmax + 0.1vmax);
+}
+#encoderOutput {
+    height: calc(100vh - 3.5vmax - 1vmax - (0.5vmax + 1.5vmax + 2.5vmax) - 0.2vmax - 0.1vmax - 1vmax);
+    border: 1px solid #222;
+    border-radius: 0.75vmax;
+    width: 47vw;
+    display: inline-block;
+    position: absolute;
+    top: calc(3.5vmax + 1vmax + (0.5vmax + 1.5vmax + 2.5vmax) + 0.5vmax + 0.1vmax);
+    left: calc(2.5vw + 47vw + 0.5vw);
+    background-color: #fdd;
+}
+
+/* Decoder */
+#decoderInput {
     /*display: none;*/
 }
