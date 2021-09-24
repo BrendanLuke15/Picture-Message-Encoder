@@ -8,8 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stylesheet.css">
         <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-        <!-- favicon from https://iconarchive.com/show/100-flat-icons-by-graphicloads/location-icon.html with modification->
-        <link rel="icon" type="image/png" href="favicon.png"/>-->
+        <!-- favicon from https://www.clipartmax.com/middle/m2H7G6K9Z5m2N4N4_puzzle-icon-transparent-puzzle-piece-svg/ with modification-->
+        <link rel="icon" type="image/png" href="favicon.png"/>
         <script src="imageExtract.js" async></script>
         <script src="outputSelection.js" async></script>
     </head>
@@ -22,18 +22,20 @@
             Select Operation Type:
             <span id="encode" onclick="encodeSelect()" class="active">Encoder</span>
             <span id="decode" onclick="decodeSelect()">Decoder</span>
-            <!-- <p id="userPrompt">Select an operation type to proceed.</p> -->
         </div>
         <!-- Encoder I/O -->
         <div id="encoderInput">
-            
+            <h2>Input Text or Upload Text File</h2>
         </div>
         <div id="encoderOutput">
             
         </div>
         <!-- Decoder I/O -->
         <div id="decoderInput">
-            
+            <label>Image File:</label><br/>
+            <input type="file" accept=".png,.jpg,.jpeg,.svg,.bmp" id="imageLoader" name="imageLoader"/>
+            <canvas id="imageCanvas" width="100" height="100" style="border: 1px solid black;"></canvas>
+            <button onclick="imgDataFunc()">Click me for RGB</button>
         </div>
         <div id="decoderOutput">
             

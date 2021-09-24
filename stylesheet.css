@@ -1,6 +1,6 @@
 /*
 By: Brendan Luke
-Date: September 21, 2021
+Date: September 24, 2021
 Scope: stylesheet for picture message encoder project
 */
 
@@ -111,5 +111,23 @@ body {
 
 /* Decoder */
 #decoderInput {
-    /*display: none;*/
+    height: calc(100vh - 3.5vmax - 1vmax - (0.5vmax + 1.5vmax + 2.5vmax) - 0.2vmax - 0.1vmax - 1vmax);
+    border: 1px solid #222;
+    border-radius: 0.75vmax;
+    width: 47vw;
+    margin-left: 2.5vw;
+    display: none;/*inline-block;*/
+    position: absolute;
+    top: calc(3.5vmax + 1vmax + (0.5vmax + 1.5vmax + 2.5vmax) + 0.5vmax + 0.1vmax);
+}
+#decoderOutput {
+    height: calc(100vh - 3.5vmax - 1vmax - (0.5vmax + 1.5vmax + 2.5vmax) - 0.2vmax - 0.1vmax - 1vmax);
+    border: 1px solid #222;
+    border-radius: 0.75vmax;
+    width: 47vw;
+    display: none;/*inline-block;*/
+    position: absolute;
+    top: calc(3.5vmax + 1vmax + (0.5vmax + 1.5vmax + 2.5vmax) + 0.5vmax + 0.1vmax);
+    left: calc(2.5vw + 47vw + 0.5vw);
+    background-color: #f0d;
 }
