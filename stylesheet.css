@@ -12,6 +12,9 @@ Scope: stylesheet for picture message encoder project
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+h2 {
+    padding: 0.5vmax;
+}
 
 /* Header */
 #header {
